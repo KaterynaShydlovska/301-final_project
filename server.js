@@ -39,7 +39,9 @@ function homePage(request, response) {
 
 
 function newSearch(req, res) {
-  let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=6&apikey=${process.env.TICKETMASTER_API_KEY}&city=seattle&startDateTime=2019-11-18T17:00:00Z`;
+  let date = new Date();
+  let startDateTime = date.toISOString().split('.')[0]+"Z";
+  let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=6&apikey=${process.env.TICKETMASTER_API_KEY}&city=seattle&startDateTime=${startDateTime}`;
 
   superagent.get(url)
     .then(data => {
