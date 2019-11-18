@@ -39,7 +39,7 @@ function homePage(request, response) {
 
 
 function newSearch(req, res) {
-  let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=6&apikey=${process.env.TICKETMASTER_API_KEY}`;
+  let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=6&apikey=${process.env.TICKETMASTER_API_KEY}&city=seattle&startDateTime=2019-11-18T17:00:00Z`;
 
   superagent.get(url)
     .then(data => {
@@ -55,7 +55,14 @@ function newSearch(req, res) {
 
 function TicketMaster(events) {
   this.name = events.name;
-  console.log('the instance: ', this);
+  this.date = events.dates.start.localDate;
+  this.venue = events._embedded.venues[0].name;
+  this.description = events.info;
+  this.address_line_1 = events._embedded.venues[0].address.line1;
+  this.address_line_2 = events._embedded.venues[0].address.line2;
+  this.address_line_3 = `${events._embedded.venues[0].city.name}, ${events._embedded.venues[0].state.stateCode} ${events._embedded.venues[0].postalCode}`;
+  this.img_url = events.images[0].url;
+  console.log('venues at 0: ', events._embedded.venues[0]);
 }
 
 /////////////////////////
