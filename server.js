@@ -36,7 +36,7 @@ app.use(errorHandler);
 
 
 function newSearch(req, res) {
-  let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=${process.env.TICKETMASTER_API_KEY}`;
+  let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=6&apikey=${process.env.TICKETMASTER_API_KEY}`;
 
   superagent.get(url)
     .then(data => {
