@@ -1,5 +1,9 @@
 'use strict'
 
+// Ticketmaster API Keys
+// Consumer Key    neesvME0ei2zLE4wcNh8gDTYarXMYgiJ
+// Consumer Secret    gyt1BViKhsQX06XC
+
 require('dotenv').config();
 
 const express = require('express');
@@ -31,9 +35,42 @@ app.use('*', notFoundHandler);
 app.use(errorHandler);
 
 
+// function newSearch(req, res) {
+//   superagent.ajax({
+//     type: 'GET',
+//     url: `https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=${process.env.TICKETMASTER_API_KEY}`,
+//     async: true,
+//     dataType: 'json',
+//     success: function (json) {
+//       console.log(json);
+//       // Parse the response.
+//       // Do other things.
+//     },
+//     error: function (xhr, status, err) {
+//       // This time, we do not end up here!
+//     }
+//   });
+//   res.render('search');
+// }
 
 function newSearch(req, res) {
-  res.render('search');
+  let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=${process.env.TICKETMASTER_API_KEY}`;
+
+  superagent.get(url)
+    .then(data => {
+      const ticketMasterEvent = data.body._embedded.events.map( events => {
+        return new TicketMaster(events);
+      });
+      res.status(200).json(ticketMasterEvent);
+    })
+    .catch(() => {
+      errorHandler(`So sorry, something went wrong`, req, res);
+    });
+}
+
+function TicketMaster(events) {
+  this.name = events.name;
+  console.log('the instance: ', this);
 }
 
 /////////////////////////
