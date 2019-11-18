@@ -26,9 +26,16 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('./public'));
 
+app.get('/', homePage);
 app.get('/search', newSearch);
 app.use('*', notFoundHandler);
 app.use(errorHandler);
+
+
+function homePage(request, response) {
+  response.render('pages/index');
+}
+
 
 
 function newSearch(req, res) {
