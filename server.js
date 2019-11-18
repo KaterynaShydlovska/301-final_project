@@ -1,9 +1,5 @@
 'use strict'
 
-// Ticketmaster API Keys
-// Consumer Key    neesvME0ei2zLE4wcNh8gDTYarXMYgiJ
-// Consumer Secret    gyt1BViKhsQX06XC
-
 require('dotenv').config();
 
 const express = require('express');
