@@ -48,7 +48,13 @@ function newSearch(req, res) {
 
 function TicketMaster(events) {
   this.name = events.name;
-  console.log('the instance: ', this);
+  this.date = events.dates.start.localDate;
+  this.venue = events._embedded.venues[0].name;
+  this.address_line_1 = events._embedded.venues[0].address.line1;
+  this.address_line_2 = events._embedded.venues[0].address.line2;
+  this.address_line_3 = `${events._embedded.venues[0].city.name}, ${events._embedded.venues[0].state.stateCode} ${events._embedded.venues[0].postalCode}`;
+  this.img_url = events.images[0].url;
+  console.log('venues at 0: ', events._embedded.venues[0]);
 }
 
 /////////////////////////
