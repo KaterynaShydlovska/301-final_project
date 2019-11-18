@@ -46,13 +46,8 @@ function newSearch(req, res) {
 
 
   superagent.get(url)
-    .then(data => {
-      const ticketMasterEvent = data.body._embedded.events.map( events => {
-        return new TicketMaster(events);
-      })
-        .then(eventsArr => res.render('pages/searches/events', { eventsArrKey: eventsArr }))
-      res.status(200).json(ticketMasterEvent);
-    })
+    .then(data => data.body._embedded.events.map( events => new TicketMaster(events)))
+    .then(eventsArr => res.render('pages/searches/events', { eventsArrKey: eventsArr }))
     .catch(() => {
       res.render('pages/error');
     });
