@@ -28,7 +28,11 @@ app.use(express.static('./public'));
 
 app.get('/', homePage);
 app.get('/search', newSearch);
+
+app.get('/aboutUS', aboutUS);
+
 app.post('/events', addEvent);
+
 
 app.use('*', notFoundHandler);
 app.use(errorHandler);
@@ -40,6 +44,11 @@ app.use(errorHandler);
 function homePage(request, response) {
   response.render('pages/index');
 }
+
+function aboutUS(request, response) {
+  response.render('pages/searches/aboutUS');
+}
+
 
 
 
