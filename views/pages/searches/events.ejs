@@ -21,6 +21,19 @@
           <p><%= events.address_line_2 %></p>
           <img src="<%=events.img_url%>" />
         </li>
+        <form action="/events" method="post">
+          <input name="name" value="<%= events.name %>" type="hidden"/> 
+          <input name="date" value="<%= events.date %>" type="hidden">
+          <input name="venue" value="<%= events.description %>" type="hidden">
+          <input name="address_line_1" value="<%= events.address_line_1 %>" type="hidden">
+
+          <input name="address_line_2" value="<%= events.address_line_2 %>" type="hidden">
+
+          <input name="address_line_3" value="<%= events.address_line_3 %>" type="hidden">
+
+          <input name="img_url" value="<%= events.img_url %>" type="hidden">
+        <button id="save" class="view">Save Event</button>
+      </form>
         <% }) %>
       </ul>
 
