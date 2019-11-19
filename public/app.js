@@ -1,11 +1,6 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<script>
-    $(document).ready(colorChange(){
-      $("click").hover(colorChange(){
-        $(this).css("background-color", "green");
-        }, colorChange(){
-        $(this).css("background-color", "yellow");
-      });
-    });
-    </script>
+$('li').hover(function () {
+  $(this).css('background-color', 'rgba(171, 205, 239, 0.5)');
+}, function () {
+  $(this).css('background-color', '');
+});
