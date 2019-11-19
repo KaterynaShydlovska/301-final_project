@@ -24,6 +24,12 @@ img{
   width: 150px;
   height: 100px;
 }
+.photo{
+  width: 250px;
+  height: 290px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
 form{
   text-align: center;
   margin-top: 150px;
@@ -37,17 +43,25 @@ main{
 h1{
   font-family: 'Permanent Marker', cursive;
 }
+p{
+  font-family: 'Permanent Marker', cursive;
+}
  footer{
-   color: white;
-<<<<<<< HEAD
-   background-color: black;
+   color: whitesmoke;
+  
+  
  }
+  a{
+   text-decoration: none;
+   /* font-family: 'Permanent Marker', cursive; */
+   /* font-size: 18px;*/
+   color: black;  
+   /* border: 1px solid rgb(232, 243, 137); */
+   /* background-color: rgb(240, 255, 253); */
+   
+ /* }
+ a:hover{
+   background-color: rgb(216, 199, 101);
+ } */
 
- 
-=======
 
-   background-color: black;
- }
-
-
->>>>>>> 31929096a145dd0e1b21325ddb2d432e4e64fac8
