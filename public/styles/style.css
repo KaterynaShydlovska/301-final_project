@@ -8,11 +8,12 @@ text-align: center;
 }
 body{
   min-height: 97vh;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-image: url("/public/img/background.png");
+  background-image: url("../img/background.png");
+  background-size: 100%;
   /* margin: 2%; */
 }
 img{
@@ -32,4 +33,6 @@ main{
 h1{
   font-family: 'Permanent Marker', cursive;
 }
- 
+ footer{
+   color: white;
+ }
