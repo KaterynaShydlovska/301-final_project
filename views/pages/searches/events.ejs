@@ -13,12 +13,16 @@
         <li class="eventList">
           <img class="eventimg" src="<%=events.img_url%>" />
           <h3><%= events.name %></h3>
-          <p><%= events.date %></p>
+          <p><%= `${(((new Date(events.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(events.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(11, 5)}` %></p>
           <p ><%= events.venue %></p>
+<<<<<<< HEAD
           <p><%= events.description %></p>
           <p><%= events.address_line_1 %></p>
           <p><%= events.address_line_2%></p>
           <p><%= events.address_line_2 %></p>
+=======
+          <img src="<%=events.img_url%>" />
+>>>>>>> ca6caf7f99a17ac74a68dd01177a8cdca0d5dce4
         </li>
         <form action="/events" method="post">
           <input name="name" value="<%= events.name %>" type="hidden"/> 
@@ -40,7 +44,8 @@
   <footer>
     <%- include('../../layout/footer'); -%>
   </footer>
-
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="./../app.js"></script>
 </body>
 
 </html>
