@@ -7,8 +7,13 @@ header{
 text-align: center;
 }
 body{
-  height: 960px;
+  min-height: 97vh;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-image: url("/public/img/background.png");
+  /* margin: 2%; */
 }
 img{
   width: 150px;
@@ -20,5 +25,11 @@ form{
 }
 footer{
   text-align: center;
-  position: relative;
 }
+main{
+  /* height: auto; */
+}
+h1{
+  font-family: 'Permanent Marker', cursive;
+}
+ 
