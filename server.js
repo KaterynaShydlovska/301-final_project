@@ -28,8 +28,13 @@ app.use(express.static('./public'));
 
 app.get('/', homePage);
 app.get('/search', newSearch);
+app.post('/events', addEvent);
+
 app.use('*', notFoundHandler);
 app.use(errorHandler);
+
+
+
 
 
 function homePage(request, response) {
@@ -41,12 +46,12 @@ function homePage(request, response) {
 function newSearch(req, res) {
 
   let date = new Date();
-  let startDateTime = date.toISOString().split('.')[0]+"Z";
+  let startDateTime = date.toISOString().split('.')[0] + "Z";
   let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=6&apikey=${process.env.TICKETMASTER_API_KEY}&city=seattle&startDateTime=${startDateTime}`;
 
 
   superagent.get(url)
-    .then(data => data.body._embedded.events.map( events => new TicketMaster(events)))
+    .then(data => data.body._embedded.events.map(events => new TicketMaster(events)))
     .then(eventsArr => res.render('pages/searches/events', { eventsArrKey: eventsArr }))
     .catch(() => {
       res.render('pages/error');
@@ -64,8 +69,26 @@ function TicketMaster(events) {
   this.address_line_3 = `${events._embedded.venues[0].city.name}, ${events._embedded.venues[0].state.stateCode} ${events._embedded.venues[0].postalCode}`;
 
   this.img_url = events.images[0].url;
-  console.log('venues at 0: ', events._embedded.venues[0]);
+  // console.log('venues at 0: ', events._embedded.venues[0]);
 }
+
+/////////
+
+function addEvent(req, res) {
+  console.log('saving that event to the database...');
+
+  let { name, date, venue, description, address_line_1, address_line_2, address_line_3, img_url } = req.body;
+
+  // save book to database
+  let sql = 'INSERT INTO my_events (name, date, venue, description, address_line_1, address_line_2, address_line_3, img_url) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);';
+
+  let safeValues = [name, date, venue, description, address_line_1, address_line_2, address_line_3, img_url];
+
+  // select that book back from the DB with the id
+  client.query(sql, safeValues);
+}
+
+/////////
 
 /////////////////////////
 // *** Other functions will go here
