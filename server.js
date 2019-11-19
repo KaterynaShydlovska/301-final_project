@@ -66,7 +66,7 @@ function aboutUS(request, response) {
 function newSearch(req, res) {
 
   let date = new Date();
-  let startDateTime = date.toISOString().split('.')[0] + "Z";
+  let startDateTime = date.toISOString().split('.')[0] + 'Z';
   let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=6&apikey=${process.env.TICKETMASTER_API_KEY}&city=seattle&startDateTime=${startDateTime}`;
 
 
@@ -105,7 +105,8 @@ function addEvent(req, res) {
   let safeValues = [name, date, venue, description, address_line_1, address_line_2, address_line_3, img_url];
 
   // select that book back from the DB with the id
-  client.query(sql, safeValues);
+  client.query(sql, safeValues)
+    .then(res.redirect('/saved'));
 }
 
 
@@ -139,7 +140,7 @@ function deleteEvent(request, response) {
   let SQL = `DELETE FROM my_events WHERE id=$1;`;
   let id = request.body.id;
   client.query(SQL, [id])
-    .then(response.redirect('pages/searches/events'))
+    .then(response.redirect('/saved'))
     .catch(err => console.error(err));
 }
 
