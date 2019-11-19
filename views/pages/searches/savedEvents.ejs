@@ -12,14 +12,20 @@
       </header>
     <main>
         <section class="eventContainer">
-           <ul id="myEvents">
-                <li class="savedEvent">
-                    <h2 id="name">Event Name</h2>
-                    <h4 id="date">Date</h4>
-                    <img id="image" src="" alt="">
-                    <h4 id="venue">Venue</h4>
-                    <p id="adress">Adress</p>
+            <h2>Saved Events (<%=results.length %>)</h2>
+            <ul>
+                <% results.forEach(event => { %>
+                <li>
+                    <h3><%= event.name %></h3>
+                    <p><%= event.date %></p>
+                    <p><%= event.venue %></p>
+                    <p><%= event.description %></p>
+                    <p><%= event.address_line_1 %></p>
+                    <p><%= event.address_line_2%></p>
+                    <p><%= event.address_line_2 %></p>
+                    <img src="<%=event.img_url%>" />
                 </li>
+                <% }) %>
             </ul>
         </section>
         </main>

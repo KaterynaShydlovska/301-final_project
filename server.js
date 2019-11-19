@@ -32,6 +32,7 @@ app.get('/search', newSearch);
 app.get('/aboutUS', aboutUS);
 
 app.post('/events', addEvent);
+app.get('/saved', getEvents);
 
 
 app.use('*', notFoundHandler);
@@ -95,6 +96,20 @@ function addEvent(req, res) {
 
   // select that book back from the DB with the id
   client.query(sql, safeValues);
+}
+
+
+function getEvents(req, res) {
+  let SQL = 'SELECT * FROM my_events;';
+  return client.query(SQL)
+    .then(results => {
+      // console.log(results);
+      return res.render('pages/searches/savedEvents', { results: results.rows })
+    })
+    .catch(() => {
+      res.render('pages/error');
+    })
+  // res.render('pages/index');
 }
 
 /////////
