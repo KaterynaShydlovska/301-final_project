@@ -3,14 +3,15 @@
 <head>
       <%- include('../../layout/head'); -%>
 </head>
-<body>
+<body id="eventBody">
   <header>
   <%- include('../../layout/header'); -%>
   </header>
-  <main>
-      <ul>
+  <main id="eventMain">
+      <ul id="eventUl">
         <% eventsArrKey.forEach(events => { %>
-        <li>
+        <li class="eventList">
+          <img class="eventimg" src="<%=events.img_url%>" />
           <h3><%= events.name %></h3>
           <p><%= events.date %></p>
           <p ><%= events.venue %></p>
@@ -18,7 +19,6 @@
           <p><%= events.address_line_1 %></p>
           <p><%= events.address_line_2%></p>
           <p><%= events.address_line_2 %></p>
-          <img src="<%=events.img_url%>" />
         </li>
         <form action="/events" method="post">
           <input name="name" value="<%= events.name %>" type="hidden"/> 
