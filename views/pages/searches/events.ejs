@@ -12,7 +12,7 @@
         <% eventsArrKey.forEach(events => { %>
         <li>
           <h3><%= events.name %></h3>
-          <p><%= events.date %></p>
+          <p><%= `${(((new Date(events.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(events.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(11, 5)}` %></p>
           <p ><%= events.venue %></p>
           <img src="<%=events.img_url%>" />
         </li>
