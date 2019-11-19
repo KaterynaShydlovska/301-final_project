@@ -36,7 +36,8 @@ app.use(methodOverride((request, response) => {
 }));
 
 app.get('/', homePage);
-app.get('/search', newSearch);
+app.get('/search', searchHandler);
+// app.get('/searches', newSearch);
 
 app.get('/aboutUS', aboutUS);
 
@@ -60,14 +61,19 @@ function aboutUS(request, response) {
   response.render('pages/searches/aboutUS');
 }
 
+// function newSearch(req, res) {
+//   // renders the search form 'pages/searches/new'
+//   res.render('pages/searches/events');
+// }
 
+function searchHandler(req, res) {
 
-
-function newSearch(req, res) {
+  console.log('search form entry: ', req.query.search);
+  let userSearchKeyword = req.query.search;
 
   let date = new Date();
   let startDateTime = date.toISOString().split('.')[0] + 'Z';
-  let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=6&apikey=${process.env.TICKETMASTER_API_KEY}&city=seattle&startDateTime=${startDateTime}`;
+  let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=6&apikey=${process.env.TICKETMASTER_API_KEY}&city=seattle&startDateTime=${startDateTime}&keyword=${userSearchKeyword}`;
 
 
   superagent.get(url)
@@ -109,7 +115,6 @@ function addEvent(req, res) {
     .then(res.redirect('/saved'));
 }
 
-
 function getEvents(req, res) {
   let SQL = 'SELECT * FROM my_events;';
   return client.query(SQL)
@@ -122,8 +127,9 @@ function getEvents(req, res) {
     })
   // res.render('pages/index');
 }
+
 function getOneEvent(req, res) {
-  console.log('I am here', req.params);
+  console.log('req.params: ', req.params);
   let SQL = 'SELECT * FROM my_events WHERE id=$1;';
   let values = [req.params.event_id];
 
