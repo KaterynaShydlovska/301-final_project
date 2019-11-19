@@ -12,9 +12,9 @@
       </header>
     <main>
         <div class="search-form">
-            <form action="/searches" method="post">
+            <form action="/search" method="get">
               <input id="searchBar" type="text" name="search" placeholder="search">
-              <button type="submit">Search Event</button>
+              <a href="/search"></a><button type="submit">Search Event</button></a>
             </form>
             <form action="/search" method="get">
                 <a href="/search"><button type="click">Events</button></a>
@@ -24,7 +24,7 @@
     <footer>
         <%- include('../layout/footer'); -%>
     </footer> 
-   
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </body>
 
 </html>

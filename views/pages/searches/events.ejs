@@ -14,10 +14,6 @@
           <h3><%= events.name %></h3>
           <p><%= events.date %></p>
           <p ><%= events.venue %></p>
-          <p><%= events.description %></p>
-          <p><%= events.address_line_1 %></p>
-          <p><%= events.address_line_2%></p>
-          <p><%= events.address_line_2 %></p>
           <img src="<%=events.img_url%>" />
         </li>
         <form action="/events" method="post">
@@ -40,7 +36,8 @@
   <footer>
     <%- include('../../layout/footer'); -%>
   </footer>
-
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="./../app.js"></script>
 </body>
 
 </html>
