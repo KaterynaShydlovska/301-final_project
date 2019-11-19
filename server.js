@@ -101,7 +101,7 @@ function TicketMaster(events) {
 /////////
 
 function addEvent(req, res) {
-  console.log('saving that event to the database...');
+  console.log('saving that event to the database...', req.body, req.params);
 
   let { name, date, venue, description, address_line_1, address_line_2, address_line_3, img_url } = req.body;
 
