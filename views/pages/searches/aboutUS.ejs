@@ -4,12 +4,15 @@
   <%- include('../../layout/head'); -%>
 </head>
 
-<body>
-  <img src="./../img/seattle.png">
-  <h1>ABOUT US</h1>
-<div>
+<body id="aboutbody" >
+  <div id="aboutDiv"> 
+    <img src="./../img/seattle.png">
+    <h1>ABOUT US</h1> 
+  </div>
+  <main id="about">
+<div class="aboutDiv">
 <img class = "photo" src="./../img/kate.jpg" alt="Kate">
-<p>Hello, my name is Kate, I'm Software Developer. Originally I'm from Ukraine in Ukraine I got University degree in
+<p class="mypitch">Hello, my name is Kate, I'm Software Developer. Originally I'm from Ukraine in Ukraine I got University degree in
 Banking .I have years of work experience in Ukraine and US in different areas most of them in customer service.
 
 In my last job I worked as customer support agent in technology company which is supporting computer games.
@@ -19,25 +22,21 @@ My past experience made me flexible I can work in the team and also do individua
 I have experience with JS,HTML,CSS,next month I'm planning take Python course that get me apportunity to be Full-stack
 Developer.</p>
 </div>
-<div>
+<div class="aboutDiv">
 <img class = "photo" src="./../img/Ellen.jpg" alt="Ellen">
-<p>My name is Ellen! I discovered programming in grad school, where I found that I really loved the coding aspect of my
+<p class="mypitch" >My name is Ellen! I discovered programming in grad school, where I found that I really loved the coding aspect of my
 quantitative analysis courses. After I graduated, I worked as a Data Analyst at a state agency. I found that my favorite
 part of the job was writing and verifying SQL queries with the data engineer from IT, so I chose to become a software
 developer! Right now I'm a student at Code Fellows, where I help hypothetical salmon cookie bakers make beautiful
 websites that keep track of their sales data.
 </p>
 </div>
-<div>
+<div class="aboutDiv">
 <img class = "photo"src="./../img/El.jpg" alt="Elhadji">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ea molestiae cupiditate officia, molestias aspernatur
+<p class="mypitch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ea molestiae cupiditate officia, molestias aspernatur
   possimus. Iusto, ad omnis, unde, cum iste nostrum quos laboriosam minima placeat nulla perspiciatis earum!</p>
 </div>
-<div>
-<img class = "photo" src="./../img/images.png" alt="Coel">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ea molestiae cupiditate officia, molestias aspernatur
-  possimus. Iusto, ad omnis, unde, cum iste nostrum quos laboriosam minima placeat nulla perspiciatis earum!</p>
-</div>
+</main>
     <footer>
       <%- include('../../layout/footer'); -%>
     </footer>

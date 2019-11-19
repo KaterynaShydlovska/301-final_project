@@ -28,7 +28,7 @@ img{
   width: 250px;
   height: 290px;
   border: 1px solid black;
-  border-radius: 12px;
+  border-radius: 50%;
 }
 form{
   text-align: center;
@@ -96,4 +96,33 @@ p{
 .eventList{
   border: 1px solid black;
   width: fit-content;
+}
+#about{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(63, 66, 66);
+  color: white;
+ 
+
+}
+.aboutDiv{
+  /* border: 1px solid black; */
+  text-align: center;
+}
+#aboutDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+#aboutbody{
+  background:  rgb(63, 66, 66); 
+  color: white;
+}
+.mypitch{
+  border: 1px solid rgb(59, 59, 58);
+  text-align: center;
+  padding: 5px;
 }
