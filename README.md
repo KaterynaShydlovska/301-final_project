@@ -16,4 +16,4 @@ Instructions - Click on Events to see upcoming events.  You can also search for 
 
 API used - ticketmaster.
 
-Database schemas
+Clearly defined database schemas
