@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <% include head %>
+      <%- include('../../layout/head'); -%>
 </head>
 
 <body>
   <header>
-    <% include header %>
+  <%- include('../../layout/header'); -%>
   </header>
   <main>
-        
+      <ul>
+        <% eventsArrKey.forEach(events => { %>
+        <li>
+          <h3><%= events.name %></h3>
+          <p><%= events.date %></p>
+          <p ><%= events.venue %></p>
+          <p><%= events.description %></p>
+          <p><%= events.address_line_1 %></p>
+          <p><%= events.address_line_2%></p>
+          <p><%= events.address_line_2 %></p>
+          <img src="<%=events.img_url%>" />
+        </li>
+        <% }) %>
+      </ul>
 
   </main>
   
   <footer>
-    <% include footer %>
+    <%- include('../../layout/footer'); -%>
   </footer>
 
 </body>

@@ -16,6 +16,9 @@ body{
   background-size: 100%;
   /* margin: 2%; */
 }
+ul{
+  text-decoration: none;
+} 
 img{
   width: 150px;
   height: 100px;
