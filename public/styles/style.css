@@ -7,7 +7,8 @@ header{
 text-align: center;
 }
 body{
-  min-height: 97vh;
+  min-height: 100vh;
+  min-width: 100vw;
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
@@ -38,4 +39,7 @@ h1{
 }
  footer{
    color: white;
+   background-color: black;
  }
+
+ 
