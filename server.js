@@ -5,6 +5,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const pg = require('pg');
+const methodOverride = require('method-override');
 const superagent = require('superagent');
 require('ejs');
 
@@ -25,6 +26,14 @@ app.set('view engine', 'ejs');
 ////////////////////////////////////////////
 
 app.use(express.static('./public'));
+app.use(methodOverride((request, response) => {
+  if (request.body && typeof request.body === 'object' && '_method' in request.body) {
+    // look in urlencoded POST bodies and delete it
+    let method = request.body._method;
+    delete request.body._method;
+    return method;
+  }
+}));
 
 app.get('/', homePage);
 app.get('/search', newSearch);
@@ -32,8 +41,9 @@ app.get('/search', newSearch);
 app.get('/aboutUS', aboutUS);
 
 app.post('/events', addEvent);
+// app.get('/events/:event_id', getOneEvent);
 app.get('/saved', getEvents);
-
+app.delete('/delete/:event_id', deleteEvent);
 
 app.use('*', notFoundHandler);
 app.use(errorHandler);
@@ -56,7 +66,7 @@ function aboutUS(request, response) {
 function newSearch(req, res) {
 
   let date = new Date();
-  let startDateTime = date.toISOString().split('.')[0] + "Z";
+  let startDateTime = date.toISOString().split('.')[0] + 'Z';
   let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=6&apikey=${process.env.TICKETMASTER_API_KEY}&city=seattle&startDateTime=${startDateTime}`;
 
 
@@ -95,7 +105,8 @@ function addEvent(req, res) {
   let safeValues = [name, date, venue, description, address_line_1, address_line_2, address_line_3, img_url];
 
   // select that book back from the DB with the id
-  client.query(sql, safeValues);
+  client.query(sql, safeValues)
+    .then(res.redirect('/saved'));
 }
 
 
@@ -111,8 +122,27 @@ function getEvents(req, res) {
     })
   // res.render('pages/index');
 }
+// function getOneEvent(req, res) {
+//   let SQL = 'SELECT * FROM my_events WHERE id=$1;';
+//   let values = [req.params.event_id];
 
-/////////
+//   return client.query(SQL, values)
+//     .then(result => {
+//       return res.render('pages/searches/savedEvents', { results: result.rows[0] });
+//     })
+//     .catch(err => console.error(err));
+// }
+
+function deleteEvent(request, response) {
+  console.log('delete me ', request.body)
+  // console.log('delete me ', request.params.id)
+  // need SQL to update the specific task that we were on
+  let SQL = `DELETE FROM my_events WHERE id=$1;`;
+  let id = request.body.id;
+  client.query(SQL, [id])
+    .then(response.redirect('/saved'))
+    .catch(err => console.error(err));
+}
 
 /////////////////////////
 // *** Other functions will go here
