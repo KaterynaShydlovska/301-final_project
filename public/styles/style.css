@@ -7,8 +7,14 @@ header{
 text-align: center;
 }
 body{
-  /* height: 960px; */
-  border: 1px solid black;
+  min-height: 97vh;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-image: url("../img/background.png");
+  background-size: 100%;
+  /* margin: 2%; */
 }
 ul{
   text-decoration: none;
@@ -23,5 +29,13 @@ form{
 }
 footer{
   text-align: center;
-  position: relative;
 }
+main{
+  /* height: auto; */
+}
+h1{
+  font-family: 'Permanent Marker', cursive;
+}
+ footer{
+   color: white;
+ }
