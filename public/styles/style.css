@@ -7,9 +7,12 @@ header{
 text-align: center;
 }
 body{
-  height: 960px;
+  /* height: 960px; */
   border: 1px solid black;
 }
+ul{
+  text-decoration: none;
+} 
 img{
   width: 150px;
   height: 100px;
