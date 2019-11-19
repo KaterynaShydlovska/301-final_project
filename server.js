@@ -41,7 +41,7 @@ app.get('/search', newSearch);
 app.get('/aboutUS', aboutUS);
 
 app.post('/events', addEvent);
-// app.get('/events/:event_id', getOneEvent);
+app.get('/events/:event_id', getOneEvent);
 app.get('/saved', getEvents);
 app.delete('/delete/:event_id', deleteEvent);
 
@@ -122,19 +122,20 @@ function getEvents(req, res) {
     })
   // res.render('pages/index');
 }
-// function getOneEvent(req, res) {
-//   let SQL = 'SELECT * FROM my_events WHERE id=$1;';
-//   let values = [req.params.event_id];
+function getOneEvent(req, res) {
+  console.log('I am here', req.params);
+  let SQL = 'SELECT * FROM my_events WHERE id=$1;';
+  let values = [req.params.event_id];
 
-//   return client.query(SQL, values)
-//     .then(result => {
-//       return res.render('pages/searches/savedEvents', { results: result.rows[0] });
-//     })
-//     .catch(err => console.error(err));
-// }
+  return client.query(SQL, values)
+    .then(result => {
+      return res.render('pages/searches/eventDetail', { event: result.rows[0] });
+    })
+    .catch(err => console.error(err));
+}
 
 function deleteEvent(request, response) {
-  console.log('delete me ', request.body)
+  // console.log('delete me ', request.body)
   // console.log('delete me ', request.params.id)
   // need SQL to update the specific task that we were on
   let SQL = `DELETE FROM my_events WHERE id=$1;`;
