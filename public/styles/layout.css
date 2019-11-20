@@ -83,3 +83,12 @@ li {
   overflow: scroll;
   /* width: 100%; */
 }
+#eventInfo {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.description{
+  display: none;
+}
