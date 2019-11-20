@@ -7,41 +7,37 @@
   <header>
   <%- include('../../layout/header'); -%>
   </header>
-  <main id="eventMain">
+  <nav>
+    <%- include('../../layout/nav'); -%>
+  </nav>
+  <main>
+    <section id="searhedEventContainer">
       <ul id="eventUl">
         <% eventsArrKey.forEach(events => { %>
         <li class="eventList">
           <img class="eventimg" src="<%=events.img_url%>" />
           <h3><%= events.name %></h3>
-          <p><%= `${(((new Date(events.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(events.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(11, 5)}` %></p>
-          <p ><%= events.venue %></p>
+          <p><%= `${(((new Date(events.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(events.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(11, 5)}` %> at <%=events.venue%></p>
           <p><%= events.description %></p>
-          <p><%= events.address_line_1 %></p>
-          <p><%= events.address_line_2%></p>
-          <p><%= events.address_line_2 %></p>
         </li>
         <form action="/events" method="post">
           <input name="name" value="<%= events.name %>" type="hidden"/> 
           <input name="date" value="<%= events.date %>" type="hidden">
           <input name="venue" value="<%= events.description %>" type="hidden">
           <input name="address_line_1" value="<%= events.address_line_1 %>" type="hidden">
-
           <input name="address_line_2" value="<%= events.address_line_2 %>" type="hidden">
           <input name="address_line_3" value="<%= events.address_line_3 %>" type="hidden">
-
           <input name="img_url" value="<%= events.img_url %>" type="hidden">
-        <button id="save" class="view">Save Event</button>
+          <button id="save" class="view">Save Event</button>
       </form>
         <% }) %>
       </ul>
-
+    </section>
   </main>
-  
   <footer>
     <%- include('../../layout/footer'); -%>
   </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script type="text/javascript" src="./../app.js"></script>
 </body>
-
 </html>

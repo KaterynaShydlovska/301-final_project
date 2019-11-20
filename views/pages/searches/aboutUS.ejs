@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <%- include('../../layout/head'); -%>
 </head>
 
-<body id="aboutbody" >
-  <div id="aboutDiv"> 
+<body id="aboutbody">
+  <div id="aboutDiv">
     <img src="./../img/seattle.png">
-    <h1>ABOUT US</h1> 
+    <h1>About Us</h1>
   </div>
+  <header>
+  </header>
+  <nav>
+      <%- include('../../layout/nav'); -%>
+  </nav>
   <main id="about">
-<div class="aboutDiv">
-<img class = "photo" src="./../img/kate.jpg" alt="Kate">
-<p class="mypitch">Hello, my name is Kate, I'm Software Developer. Originally I'm from Ukraine in Ukraine I got University degree in
-Banking .I have years of work experience in Ukraine and US in different areas most of them in customer service.
+    <div class="aboutDiv">
+        <p class="mypitch"> <img class="photo" src="./../img/kate.jpg" alt="Kate">
+      Hello, my name is Kate, I'm Software Developer. Originally I'm from Ukraine in Ukraine I got
+        University degree in
+        Banking .I have years of work experience in Ukraine and US in different areas most of them in customer service.
 
-In my last job I worked as customer support agent in technology company which is supporting computer games.
+        In my last job I worked as customer support agent in technology company which is supporting computer games.
 
-My past experience made me flexible I can work in the team and also do individual work,
+        My past experience made me flexible I can work in the team and also do individual work,
 
 I have experience with JS,HTML,CSS,next month I'm planning take Python course that get me apportunity to be Full-stack
 Developer.</p>
 </div>
 <div class="aboutDiv">
-  <img class = "photo" src="./../img/Ellen.jpg" alt="Ellen">
-  <p class="mypitch" >My name is Ellen! I discovered programming in grad school, where I found that I really loved the coding aspect of my
+    <p class="mypitch" > <img class = "photo" src="./../img/Ellen.jpg" alt="Ellen">
+  My name is Ellen! I discovered programming in grad school, where I found that I really loved the coding aspect of my
     quantitative analysis courses. After I graduated, I worked as a Data Analyst at a state agency. I found that my favorite
     part of the job was writing and verifying SQL queries with the data engineer from IT, so I chose to become a software
     developer! Right now I'm a student at Code Fellows, where I help hypothetical salmon cookie bakers make beautiful
@@ -32,9 +39,11 @@ Developer.</p>
   </p>
 </div>
    <div class="aboutDiv">
-   <img class = "photo"src="./../img/El.jpg" alt="Elhadji">
-   <p class="mypitch">My name is Elhadji NDOUR. I am Senegalese and teacher by profession. After obtaining my master debiology, I have 7 years   experience in teaching biology in high school. I have always liked IT but I did not have the opportunity to study them.
-     So some time after my arrival in Seattle I discovered Code Fellows that proposes a great program that interested me. So I decided to start a new adventure, a new career: Learn to become a Software Developer.</p>
+      <p class="mypitch"> <img class = "photo"src="./../img/El.jpg" alt="Elhadji">
+   My name is Elhadji NDOUR. I am Senegalese and teacher by profession. After obtaining my master debiology, 
+     I have 7 years   experience in teaching biology in high school. I have always liked IT but I did not have the opportunity to study them.
+     So some time after my arrival in Seattle I discovered Code Fellows that proposes a great program that interested me. So I decided 
+     to start a new adventure, a new career: Learn to become a Software Developer.</p>
    </div>
 </main>
     <footer>
@@ -43,4 +52,5 @@ Developer.</p>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="./../app.js"></script>
 </body>
+
 </html>

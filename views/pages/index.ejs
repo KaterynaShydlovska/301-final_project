@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <%- include('../layout/head'); -%>
-
 </head>
 
 <body>
-
-    <header>
-        <%- include('../layout/header'); -%>
-      </header>
-      <nav>
-        <%- include('../layout/nav'); -%>
-      </nav>
-    <main>
-        <div class="search-form">
-            <form action="/search" method="get">
-              <input id="searchBar" type="text" name="search" placeholder="search">
-              <a href="/search"></a><button type="submit">Search Event</button></a>
-            </form>
-            <form action="/search" method="get">
-                <a href="/search"><button type="click">Events</button></a>
-            </form>
-
-
-        </div>
+  <header>
+    <%- include('../layout/header'); -%>
+  </header>
+  <nav>
+    <%- include('../layout/nav'); -%>
+  </nav>
+    <main >
+      <section id="searchCats">
+            <%- include('../layout/searchCats'); -%>
+        </section>
+      <section id="search-form">
+        <p>Search upcoming events by keyword</p>
+        <form action="/search" method="get">
+          <input id="searchBar" type="text" name="search" placeholder="search">
+          <a href="/search"></a><button type="submit">Search Event</button></a>
+      </section>
     </main>
     <footer>
-        <%- include('../layout/footer'); -%>
-    </footer> 
+      <%- include('../layout/footer'); -%>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </body>
-
 </html>
