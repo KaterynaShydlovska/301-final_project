@@ -44,23 +44,58 @@ footer{
 .linkFooter:hover{
   color:whitesmoke;
 }
-
-/* ul{
-  text-decoration: none;
-} 
-img{
-  width: 150px;
-  height: 100px;
+/* .hamburger{
+  background:none; 
+   position:absolute;
+  /* position: relative;*/
+  /* top:0; */
+ 
+  /*line-height:45px; */
+  /* padding:5px 15px 0px 15px; */
+  /* color:#999;
+  border:0;
+  font-size:1em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
 }
-.photo{
-  width: 250px;
-  height: 290px;
-  border: 1px solid black;
-  border-radius: 50%;
+.cross{
+  background:none; */
+  /* position:absolute;*/
+  /* top:0px; */
+  /*right:0; */
+  /* padding:7px 15px 0px 15px; */
+  /* color:#999;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
 } */
 
-/* footer{
-   color: #344F73
-   /* height: 40px; */
-  
- } */
+.menu{z-index:1000000; font-weight:bold; font-size:1em; width:100%; background:#f1f1f1;  text-align:center; font-size:12px;}
+.menu a {margin-top: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menu a {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+ .menu a:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu  a { text-decoration:none;  margin: 0px; color:#666;} 
+.menu  a:hover {  color: #666; text-decoration:none;} */
+.menu a{text-decoration:none; color:#666;}
+.menu a:hover{text-decoration:none; color:#666;}
+
+.nav-bar{
+  font-size: 18px;
+}
+
+/* .glyphicon-home{
+  color:white; 
+  font-size:1.5em; 
+  margin-top:5px; 
+  margin:0 auto;
+} */
+/* header{display:inline-block; font-size:12px;} */
+/* span{padding-left:20px;} */
+/* a{color:#336699;} */
+
