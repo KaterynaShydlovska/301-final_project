@@ -17,7 +17,7 @@
                 <% results.forEach(event => { %>
                 <li>
                     <h3><%= event.name %></h3>
-                    <p><%= event.date %></p>
+                    <p><%= `${(((new Date(event.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(event.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(11, 5)}` %></p>
                     <p><%= event.venue %></p>
                     <p><%= event.description %></p>
                     <p><%= event.address_line_1 %></p>
