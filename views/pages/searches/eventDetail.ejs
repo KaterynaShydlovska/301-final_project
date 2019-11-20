@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <%- include('../../layout/head'); -%>
+  <%- include('../../layout/head'); -%>
 </head>
-
 <body>
-
-    <header>
-        <%- include('../../layout/header'); -%>
-      </header>
-    <main>
-        <div id="eventInfo">
-<ul>
-    <li>
-        <h3><%= event.name %></h3>
-        <p><%= `${(((new Date(event.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(event.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(11, 5)}` %></p>
-        <p><%= event.venue %></p>
-        <p><%= event.description %></p>
-        <p><%= event.address_line_1 %></p>
-        <p><%= event.address_line_2%></p>
-        <p><%= event.address_line_2 %></p>
-        <img src="<%=event.img_url%>" />
-        <form action="<%=`/delete/${event.id}`%>" method="POST">
-            <input type="hidden" name="_method" value="delete">
-            <input type="hidden" name="id" value="<%= event.id %>">
-            <button class="update">Delete Event</button>
-        </form>
-    </li>
-</ul>
-        </div>
+  <header>
+    <%- include('../../layout/header'); -%>
+  </header>
+  <nav>
+     <%- include('../../layout/nav'); -%>
+  </nav>
+  <main>
+    <div id="eventInfo">
+        <ul>
+            <li>
+            <h3><%= event.name %></h3>
+            <p><%= `${(((new Date(event.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(event.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(11, 5)}` %></p>
+            <p><%= event.venue %></p>
+            <p><%= event.description %></p>
+            <p><%= event.address_line_1 %></p>
+            <p><%= event.address_line_2%></p>
+            <p><%= event.address_line_2 %></p>
+            <img src="<%=event.img_url%>" />
+            <form action="<%=`/delete/${event.id}`%>" method="POST">
+              <input type="hidden" name="_method" value="delete">
+              <input type="hidden" name="id" value="<%= event.id %>">
+              <button class="update">Delete Event</button>
+            </form>
+            </li>
+        </ul>
+    </div>
     </main>
     <footer>
         <%- include('../../layout/footer'); -%>
     </footer> 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script type="text/javascript" src="./../app.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="./../app.js"></script>
 </body>
-
 </html>
