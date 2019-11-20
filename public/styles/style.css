@@ -1,18 +1,19 @@
-*{
+/* *{
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
+} */
 
 header{
 text-align: center;
 }
-body{
-  /* height: 96vh; */
+
+body {
+  height: 97vh;
   /* min-width: 97vw; */
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   background-image: url("../img/background.png");
   background-size: 100%;
   /* margin: 2%; */
@@ -28,21 +29,31 @@ img{
   width: 250px;
   height: 290px;
   border: 1px solid black;
-  border-radius: 12px;
+  border-radius: 50%;
 }
 form{
   text-align: center;
-  margin-top: 150px;
+  /* margin-top: 150px; */
 }
-footer{
-  /* text-align: center; */
-  /* display: flex; */
-  /* flex-direction: row;
-  justify-content: space-around; */
+#formFooter{
+  text-align: center;
+  display: flex;
+   flex-direction: row; 
+  justify-content: space-around; 
+  background-color: rgb(162, 173, 151);
+  height: 40px;
+  align-items: center;
+
 }
-main{
-  /* height: auto; */
+.footerDiv:hover{
+  background-color: rgb(159, 182, 173);
+  border: 2px dotted rgb(34, 114, 38);
+  border-radius: 50%;
+  height: 100%;
+  width: 15%;
+  align-items: unset;
 }
+
 h1{
   font-family: 'Permanent Marker', cursive;
 }
@@ -50,82 +61,69 @@ p{
   font-family: 'Permanent Marker', cursive;
 }
  footer{
-   color: whitesmoke;
+   color: rgb(245, 245, 245);
+   /* height: 40px; */
   
-  
+   width: 100%;
  }
-  a{
-   text-decoration: none;
-   /* font-family: 'Permanent Marker', cursive; */
-   /* font-size: 18px;*/
-   color: black;  
-   /* border: 1px solid rgb(232, 243, 137); */
-   /* background-color: rgb(240, 255, 253); */
-   
- /* }
- a:hover{
-   background-color: rgb(216, 199, 101);
- } */
+
+.linkFooter{
+  color: aliceblue;
+}
+/* #eventMain{ */
+   /* height: auto 
+} */
+#eventBody{
+  background: white; 
+  height: 97vh;
+  /* min-width: 97vw; */
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+}
+#eventUl #eventMain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+/* .eventimg{
+  width: 100%;
+  height: auto;
+} */
+.eventList{
+  border: 1px solid black;
+  width: fit-content;
+}
+#about{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(63, 66, 66);
+  color: white;
+ 
 
 }
-@media screen and (max-width: 640px){
-  .flex-container {
-      display: flex;
-  }    
-  /* *{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-   */
-  header{
+.aboutDiv{
+  /* border: 1px solid black; */
   text-align: center;
-  }
-  body{
-    /* height: 60vh; */
-    /* min-width: 97vw; */
-    /* border: 1px solid black; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around; */
-    background-color: blueviolet;
-    /* background-size: 100%; */
-    /* margin: 2%; */
-  }
-  ul{
-    text-decoration: none;
-  } 
-  img{
-    width: 75px;
-    height: 70px;
-  }
-  form{
-    text-align: center;
-    /* margin-top: 150px; */
-  }
-  footer{
-    /* text-align: center; */
-    /* display: flex; */
-    /* flex-direction: row;
-    justify-content: space-around; */
-  }
-  main{
-    /* height: auto; */
-  }
-  h1{
-    font-family: 'Permanent Marker', cursive;
-  }
-   footer{
-     color: rgb(129, 9, 9);
-     background-color: rgb(164, 196, 158);
-     width: 100%;
-     padding-bottom: 4px;
-   }
-  #formFooter{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+}
+#aboutDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  }
+}
+#aboutbody{
+  background:  rgb(63, 66, 66); 
+  color: white;
+}
+.mypitch{
+  border: 1px solid rgb(59, 59, 58);
+  text-align: center;
+  padding: 5px;
 }
