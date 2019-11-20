@@ -4,7 +4,7 @@ CREATE TABLE my_events (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   date VARCHAR(255),
-  venue VARCHAR(255),
+  venue VARCHAR(3000),
   description VARCHAR,
   address_line_1 VARCHAR(255),
   address_line_2 VARCHAR(255),
