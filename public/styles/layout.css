@@ -20,6 +20,10 @@ main {
   grid-template-columns: 30% 70%;
   overflow: scroll;
 }
+#about{
+  display: flex;
+  flex-direction: column;
+}
 
 header {
   grid-row: 1 / span 1;
