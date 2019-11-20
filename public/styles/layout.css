@@ -9,7 +9,7 @@ img {
 
 body {
   display: grid;
-  grid-template-rows: /* header */ 75fr /* nav */ 75fr /* main */ 500fr /* footer */ 75fr;
+  grid-template-rows: /* header */ 75fr /* nav */ 30fr /* main */ 500fr /* footer */ 75fr;
   height: 767px;
   margin: 0 auto;
   width: 480px;
@@ -19,6 +19,10 @@ main {
   display: grid;
   grid-template-columns: 30% 70%;
   overflow: scroll;
+}
+.nav{
+  display: inline;
+  margin: 10px;
 }
 
 #aboutDiv {

@@ -1,22 +1,49 @@
-/* *{
+*{
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-  } */
+  } 
+  html{
+    background-color: #F2F2F2;
+  }
   
-
-  /* header{
+ header{
 text-align: center;
+background-color: #1A3D43;
+} 
+body{
+background-color: rgb(226, 224, 224);
 }
 
-body {
-  height: 97vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-image: url("../img/background.png");
-   background-repeat: repeat-y;
-  background-size: 100%;
-} */
+a{
+  text-decoration: none;
+  font-family:'Bebas Neue', cursive;
+  color: gray;
+
+  
+}
+a:hover{
+  color: black;
+}
+.logo{
+  font-family:'Bebas Neue', cursive;
+  font-size: 24px;
+  color:whitesmoke;
+}
+.nav{
+  display: inline;
+  
+  
+}
+p{
+ font-family:'Bebas Neue', cursive; 
+ color: rgb(109, 102, 102);
+}
+footer{
+  background-color: #1A3D43;
+}
+.linkFooter:hover{
+  color:whitesmoke;
+}
 
 /* ul{
   text-decoration: none;
