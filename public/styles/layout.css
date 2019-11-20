@@ -74,6 +74,7 @@ footer {
   overflow: scroll;
   height: 100%;
   overflow: scroll;
+  padding: 30px;
 }
 
 li {
@@ -85,7 +86,7 @@ li {
 
 #eventInfo {
   grid-column: 1 / span 2;
-  height: 500fr;
+  padding: 30px;
 }
 
 #eventMain {
