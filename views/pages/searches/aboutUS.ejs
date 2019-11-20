@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <%- include('../../layout/head'); -%>
 </head>
 
-<body id="aboutbody" >
-  <div id="aboutDiv"> 
+<body id="aboutbody">
+  <div id="aboutDiv">
     <img src="./../img/seattle.png">
-    <h1>ABOUT US</h1> 
+    <h1>About Us</h1>
   </div>
+  <header>
+  </header>
+  <nav>
+      <%- include('../../layout/nav'); -%>
+  </nav>
   <main id="about">
-<div class="aboutDiv">
-<img class = "photo" src="./../img/kate.jpg" alt="Kate">
-<p class="mypitch">Hello, my name is Kate, I'm Software Developer. Originally I'm from Ukraine in Ukraine I got University degree in
-Banking .I have years of work experience in Ukraine and US in different areas most of them in customer service.
+    <div class="aboutDiv">
+      <img class="photo" src="./../img/kate.jpg" alt="Kate">
+      <p class="mypitch">Hello, my name is Kate, I'm Software Developer. Originally I'm from Ukraine in Ukraine I got
+        University degree in
+        Banking .I have years of work experience in Ukraine and US in different areas most of them in customer service.
 
-In my last job I worked as customer support agent in technology company which is supporting computer games.
+        In my last job I worked as customer support agent in technology company which is supporting computer games.
 
-My past experience made me flexible I can work in the team and also do individual work,
+        My past experience made me flexible I can work in the team and also do individual work,
 
-I have experience with JS,HTML,CSS,next month I'm planning take Python course that get me apportunity to be Full-stack
-Developer.</p>
-</div>
-<div class="aboutDiv">
-<img class = "photo" src="./../img/Ellen.jpg" alt="Ellen">
-<p class="mypitch" >My name is Ellen! I discovered programming in grad school, where I found that I really loved the coding aspect of my
-quantitative analysis courses. After I graduated, I worked as a Data Analyst at a state agency. I found that my favorite
-part of the job was writing and verifying SQL queries with the data engineer from IT, so I chose to become a software
-developer! Right now I'm a student at Code Fellows, where I help hypothetical salmon cookie bakers make beautiful
-websites that keep track of their sales data.
-</p>
-</div>
-<div class="aboutDiv">
-<img class = "photo"src="./../img/El.jpg" alt="Elhadji">
-<p class="mypitch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ea molestiae cupiditate officia, molestias aspernatur
-  possimus. Iusto, ad omnis, unde, cum iste nostrum quos laboriosam minima placeat nulla perspiciatis earum!</p>
-</div>
-</main>
-    <footer>
-      <%- include('../../layout/footer'); -%>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script type="text/javascript" src="./../app.js"></script>
+        I have experience with JS,HTML,CSS,next month I'm planning take Python course that get me apportunity to be
+        Full-stack
+        Developer.</p>
+    </div>
+    <div class="aboutDiv">
+      <img class="photo" src="./../img/Ellen.jpg" alt="Ellen">
+      <p class="mypitch">My name is Ellen! I discovered programming in grad school, where I found that I really loved
+        the coding aspect of my
+        quantitative analysis courses. After I graduated, I worked as a Data Analyst at a state agency. I found that my
+        favorite
+        part of the job was writing and verifying SQL queries with the data engineer from IT, so I chose to become a
+        software
+        developer! Right now I'm a student at Code Fellows, where I help hypothetical salmon cookie bakers make
+        beautiful
+        websites that keep track of their sales data.
+      </p>
+    </div>
+    <div class="aboutDiv">
+      <img class="photo" src="./../img/El.jpg" alt="Elhadji">
+      <p class="mypitch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ea molestiae cupiditate officia,
+        molestias aspernatur
+        possimus. Iusto, ad omnis, unde, cum iste nostrum quos laboriosam minima placeat nulla perspiciatis earum!</p>
+    </div>
+  </main>
+  <footer>
+    <%- include('../../layout/footer'); -%>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="./../app.js"></script>
 </body>
+
 </html>

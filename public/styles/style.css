@@ -12,8 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("../img/background.png");
-   background-repeat: repeat;
+  /* background-image: url("../img/background.png"); */
   background-size: 100%;
 }
 ul{
