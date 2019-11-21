@@ -17,9 +17,8 @@
             <% results.forEach(event => { %>
             <li>
                 <h3><%= event.name %></h3>
-                <img src="<%=event.img_url%>" />
+                <img id="savedImage" src="<%=event.img_url%>" />
                 <p> <%= `${(((new Date(event.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(event.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(11, 5)}`%> at <%=event.venue%></p>
-                <p ><%= event.description %></p>
                 <p><%= event.address_line_1 %></p>
                 <p><%= event.address_line_2%></p>
                 <form action="<%=`/delete/${event.id}`%>" method="POST">
