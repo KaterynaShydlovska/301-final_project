@@ -66,6 +66,18 @@ footer {
   /* background-color: yellow; */
   text-align: left;
   /* border: 1px solid black; */
+} 
+
+#search-form {
+  height: 50vw;
+}
+
+#search-form form {
+  margin-top: 55vw;
+}
+
+#search-form p {
+  display: none;
 }
 
 #savedEventContainer, #searhedEventContainer {
@@ -108,7 +120,19 @@ section#search-form {
   text-align: left;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 768px) {
+  #search-form p {
+    display: block;
+  }
+
+  #search-form {
+  height: auto;
+}
+
+#search-form form {
+  margin-top: 0;
+}
+
   body {
     display: grid;
     grid-template-columns: 100%;
@@ -192,36 +216,4 @@ section#search-form {
        margin: 0 auto;
       
        size: 100%;
-
-      background-color: radial-gradient(rgb(85, 33, 33), rgb(53, 90, 39), rgb(38, 37, 122)); */ */
-      background-image:       
-         url("../img/background.png"), 
-         url("../img/background.png"),
-         url("../img/background.png"),
-         url("../img/background.png"),
-         url("../img/background.png"); */
-     background-repeat: repeat-x; */
-     background-position: 
-         0 100%,
-         0 100%,
-         0 50%,
-         0 100%,
-         0 0;
-     background-size: 
-         2500px,
-         800px,
-         500px 200px,
-         1000px,
-         400px 260px; */
-      animation: 50s para infinite ease; 
-}
-  @keyframes para {
-     100% {
-         background-position: 
-             -5000px 20%,
-             -800px 95%,
-             500px 50%,
-             1000px 100%,
-             400px 0;
-} 
 }
