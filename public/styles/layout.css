@@ -282,8 +282,9 @@ box-shadow: 5px 2px #1A3D43; */
 }
 
 .parades{
-  display: none;
+  /* display: none; */
 }
+
 #eventUl > li > img{
   width: 50%;
   height: 50%;
