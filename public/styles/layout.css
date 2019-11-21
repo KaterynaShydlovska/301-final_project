@@ -84,7 +84,6 @@ footer {
   height: 500fr;
   overflow: scroll;
   height: 100%;
-  overflow: scroll;
   padding: 30px;
 }
 
@@ -177,11 +176,14 @@ section#search-form {
   }
 
   #savedEventContainer, #searhedEventContainer {
-    grid-column: 1 / span 3;
+    display: flex;
+    flex-direction: row;
+
+    height: 100%; 
+    overflow: unset;
+    /* grid-column: 1 / span 3;
     display: grid;
     height: 500fr;
-    overflow: unset;
-    height: 100%;
     /* overflow: scroll; */
   }
 
@@ -246,8 +248,11 @@ box-shadow: 5px 2px #1A3D43; */
 #about{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  overflow: hidden;
+  justify-content: space-between; 
+  /* overflow: hidden; */
+  /* flex-wrap: wrap-reverse; */
+  /* overflow: scroll; */
+  /* align-content: space-around; */
 }
 #aboutDiv >h1{
  /* display: flex;
@@ -275,8 +280,10 @@ box-shadow: 5px 2px #1A3D43; */
   border: none;
 }
 .aboutDiv{
-  width:  400px;
-  height: 367px;
+  width: 45%;
+  height: 45%;
+  /* width:  400px;
+  height: 367px; */
   text-align: center;
 
 }
@@ -289,18 +296,8 @@ box-shadow: 5px 2px #1A3D43; */
   width: 50%;
   height: 50%;
 }
-#savedEventContainer > ul > li{
-  overflow: hidden;
-    display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   justify-content: center; 
-   /* display: inline; */
-   /* width: 35%;
-   height: 35%; */
-   width:  500px;
-   height: 400px;
-  
-}
 
+
+
+}
 }
