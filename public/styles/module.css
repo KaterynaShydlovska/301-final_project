@@ -1,0 +1,50 @@
+.update, .view {
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  float: right;
+  font-size: 18px;
+  font-family:'Bebas Neue', cursive;
+  margin: 3px;
+  transition: width 2s; /* ask Brian about this */
+}
+
+.update:focus, .view:focus {
+  background-color: black;
+  color: white;
+}
+
+#searchButton {
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 18px;
+  font-family:'Bebas Neue', cursive;
+  margin: 3px;
+}
+
+#searchButton:focus, #searchButton:focus {
+  background-color: black;
+  color: white;
+}
+
+#searchBar {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 18px;
+  font-family:'Bebas Neue', cursive;
+  margin: 3px;
+  margin-left: 50px;
+}
