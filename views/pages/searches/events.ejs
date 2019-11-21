@@ -20,7 +20,6 @@
           <p><%= `${(((new Date(events.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(events.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(11, 5)}` %> at <%=events.venue%></p> 
           <p class="parades"><%= events.description %></p>
           <p id="readMore">...</p>
-          <button id="save" class="view">Save Event</button>
         </li>
         <form action="/events" method="post">
           <input name="name" value="<%= events.name %>" type="hidden"/> 
@@ -30,6 +29,7 @@
           <input name="address_line_2" value="<%= events.address_line_2 %>" type="hidden">
           <input name="address_line_3" value="<%= events.address_line_3 %>" type="hidden">
           <input name="img_url" value="<%= events.img_url %>" type="hidden">
+          <button id="save" class="view">Save Event</button>
       </form>
         <% }) %>
       </ul>
