@@ -64,7 +64,7 @@ footer {
 #search-form {
   grid-column: 2 / span 1;
   /* background-color: yellow; */
-  text-align: center;
+  text-align: left;
   border: 1px solid black;
 }
 
@@ -95,6 +95,17 @@ li {
 }
 #search-form{
   background-image: none;
+}
+
+p.search {
+  text-align: left;
+  padding: 47px;
+  padding-bottom: 23px;
+  margin: 0px;
+}
+
+section#search-form {
+  text-align: left;
 }
 
 @media only screen and (min-width: 900px) {
@@ -137,7 +148,7 @@ li {
   main {
     display: grid;
     grid-column: 1 / span 3;
-    grid-template-columns: 200fr 570fr 190fr;
+    grid-template-columns: 200fr 760fr;
     grid-template-rows: 100%;
  
   }
