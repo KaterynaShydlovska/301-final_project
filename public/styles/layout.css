@@ -9,7 +9,7 @@ img {
 
 body {
   display: grid;
-  grid-template-rows: /* header */ 75fr /* nav */ 75fr /* main */ 500fr /* footer */ 75fr;
+  grid-template-rows: /* header */ 75fr /* nav */ 30fr /* main */ 500fr /* footer */ 75fr;
   height: 767px;
   margin: 0 auto;
   width: 480px;
@@ -19,6 +19,10 @@ main {
   display: grid;
   grid-template-columns: 30% 70%;
   overflow: scroll;
+}
+.nav{
+  display: inline;
+  margin: 10px;
 }
 
 #aboutDiv {
@@ -79,16 +83,131 @@ li {
   list-style: none;
 }
 
+#eventInfo {
+  grid-column: 1 / span 2;
+  height: 500fr;
+}
+
 #eventMain {
   overflow: scroll;
   /* width: 100%; */
 }
-#eventInfo {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+
+@media only screen and (min-width: 900px) {
+  body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: /* header */ 75fr /* nav */ 30fr /* main */ 500fr /* footer */ 75fr;
+    margin: 0 auto;
+    /* width: 960px;
+    height: 768px; */
+      width: 100vw;
+      height:100vhx;  
+      margin: auto;
+       /* display: inline-block; */
+      size: 100%;
+       /* width: 100%;  */
+     }
+  
+
+  header {
+    text-align: center;
+    /* background-color: yellowgreen; */
+  }
+
+  nav {
+    text-align: left;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+#footerdiv{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-.description{
-  display: none;
+  main {
+    display: grid;
+    grid-column: 1 / span 3;
+    grid-template-columns: 200fr 570fr 190fr;
+    grid-template-rows: 100%;
+ 
+  }
+
+  #savedEventContainer, #searhedEventContainer {
+    grid-column: 1 / span 3;
+    display: grid;
+    height: 500fr;
+    overflow: scroll;
+    height: 100%;
+    overflow: scroll;
+  }
+
+  ul {
+    grid-column: 1 / span 3;
+  }
+
+  li img {
+    float: left;
+    height: 100%;
+  }
+
+  #searchCats {
+    display: grid;
+    grid-column: 1 / span 1;
+    text-align: center;
+    height: 100%;
+  }
+
+  #search-form {
+    grid-column: 2 / span 1;
+    text-align: center;
+  }
+} 
+#indexMain{
+  overflow: unset;
 }
+#bodyIndex{
+    width: 100vw;
+       height:100vh;  
+       margin: 0 auto;
+      
+       size: 100%;
+ 
+     background-color: radial-gradient(rgb(85, 33, 33), rgb(53, 90, 39), rgb(38, 37, 122));
+     background-image:       
+         url("../img/background.png"), 
+         url("../img/background.png"),
+         url("../img/background.png"),
+         url("../img/background.png"),
+         url("../img/background.png");
+     /* background-repeat: repeat-x; */
+     background-position: 
+         0 100%,
+         0 100%,
+         0 50%,
+         0 100%,
+         0 0;
+     background-size: 
+         2500px,
+         800px,
+         500px 200px,
+         1000px,
+         400px 260px;
+     animation: 50s para infinite ease;
+     }
+ 
+ @keyframes para {
+     100% {
+         background-position: 
+             -5000px 20%,
+             -800px 95%,
+             500px 50%,
+             1000px 100%,
+             400px 0;
+}
+ }
