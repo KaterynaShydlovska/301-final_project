@@ -19,6 +19,7 @@
           <img class="eventimg" src="<%=events.img_url%>" />
           <p><%= `${(((new Date(events.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(events.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(11, 5)}` %> at <%=events.venue%></p> 
           <p class="parades"><%= events.description %></p>
+          <p id="readMore">...</p>
           <button id="save" class="view">Save Event</button>
         </li>
         <form action="/events" method="post">
