@@ -17,9 +17,7 @@ background-color: rgb(226, 224, 224);
 a{
   text-decoration: none;
   font-family:'Bebas Neue', cursive;
-  color: gray;
-
-  
+  color: gray;  
 }
 a:hover{
   color: black;
@@ -33,6 +31,15 @@ a:hover{
   display: inline;
   
   
+}
+.search{
+  font-size: 24px;
+}
+h1, h2{
+ font-family: 'Pathway Gothic One', sans-serif;
+}
+h3{
+  font-family: 'Arsenal', sans-serif;
 }
 p{
  font-family:'Bebas Neue', cursive; 
@@ -98,4 +105,6 @@ footer{
 /* header{display:inline-block; font-size:12px;} */
 /* span{padding-left:20px;} */
 /* a{color:#336699;} */
+
+
 

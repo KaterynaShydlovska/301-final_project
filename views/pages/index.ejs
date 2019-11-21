@@ -17,15 +17,17 @@
             <%- include('../layout/searchCats'); -%>
         </section>
       <section id="search-form">
-        <p>Search upcoming events by keyword</p>
+        <p class="search">Search upcoming events by keyword</p>
         <form action="/search" method="get">
           <input id="searchBar" type="text" name="search" placeholder="search">
           <a href="/search"></a><button type="submit" id="searchButton">Search Event</button></a>
+        <div class="one"></div>
       </section>
     </main>
     <footer>
       <%- include('../layout/footer'); -%>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/carousel.js"></script>
 </body>
 </html>

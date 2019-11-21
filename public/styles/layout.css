@@ -93,6 +93,9 @@ li {
   overflow: scroll;
   /* width: 100%; */
 }
+#search-form{
+  background-image: none;
+}
 
 @media only screen and (min-width: 900px) {
   body {
@@ -117,7 +120,7 @@ li {
   }
 
   nav {
-    text-align: left;
+    text-align: center;
   }
 
   footer {
@@ -169,8 +172,8 @@ li {
     text-align: center;
   }
 } 
-#indexMain{
-  overflow: unset;
+ #indexMain{
+  overflow: unset; 
 }
 #bodyIndex{
     width: 100vw;
@@ -179,15 +182,15 @@ li {
       
        size: 100%;
  
-     background-color: radial-gradient(rgb(85, 33, 33), rgb(53, 90, 39), rgb(38, 37, 122));
-     background-image:       
+     /* background-color: radial-gradient(rgb(85, 33, 33), rgb(53, 90, 39), rgb(38, 37, 122)); */ */
+     /* background-image:       
          url("../img/background.png"), 
          url("../img/background.png"),
          url("../img/background.png"),
          url("../img/background.png"),
-         url("../img/background.png");
+         url("../img/background.png"); */
      /* background-repeat: repeat-x; */
-     background-position: 
+     /* background-position: 
          0 100%,
          0 100%,
          0 50%,
@@ -198,11 +201,11 @@ li {
          800px,
          500px 200px,
          1000px,
-         400px 260px;
-     animation: 50s para infinite ease;
+         400px 260px; */
+     /* animation: 50s para infinite ease; */
      }
  
- @keyframes para {
+ /* @keyframes para {
      100% {
          background-position: 
              -5000px 20%,
@@ -210,5 +213,5 @@ li {
              500px 50%,
              1000px 100%,
              400px 0;
-}
+} */
  }
