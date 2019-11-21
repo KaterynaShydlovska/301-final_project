@@ -1,4 +1,6 @@
 .update, .view {
+  color: black;
+  background-color: white;
   border: none;
   border-radius: 3px;
   padding-left: 8px;
@@ -9,6 +11,12 @@
   font-size: 18px;
   font-family:'Bebas Neue', cursive;
   margin: 3px;
+  transition: width 2s; /* ask Brian about this */
+}
+
+.update:focus, .view:focus {
+  background-color: black;
+  color: white;
 }
 
 #searchButton {
@@ -21,6 +29,11 @@
   font-size: 18px;
   font-family:'Bebas Neue', cursive;
   margin: 3px;
+}
+
+#searchButton:focus, #searchButton:focus {
+  background-color: black;
+  color: white;
 }
 
 #searchBar {
