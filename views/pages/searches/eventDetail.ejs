@@ -13,13 +13,13 @@
   <main>
     <div id="eventInfo">
             <h3><%= event.name %></h3>
+            <img id="imageDetail" src="<%=event.img_url%>" />
             <p><%= `${(((new Date(event.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(event.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(11, 5)}` %></p>
             <p><%= event.venue %></p>
             <p><%= event.description %></p>
             <p><%= event.address_line_1 %></p>
             <p><%= event.address_line_2%></p>
             <p><%= event.address_line_2 %></p>
-            <img src="<%=event.img_url%>" />
             <form action="<%=`/delete/${event.id}`%>" method="POST">
               <input type="hidden" name="_method" value="delete">
               <input type="hidden" name="id" value="<%= event.id %>">
