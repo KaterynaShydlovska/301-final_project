@@ -302,7 +302,14 @@ box-shadow: 5px 2px #1A3D43; */
   height: 50%;
 }
 
-
-
+#eventInfo{
+  display: inline-block;
+  text-align: center;
+  color: black;
+overflow: unset;  
+}
+#imageDetail{
+height: 50%;
+width: 20%;
 }
 }

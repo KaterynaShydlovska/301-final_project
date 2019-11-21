@@ -22,8 +22,8 @@
                 <p ><%= event.description %></p>
                 <p><%= event.address_line_1 %></p>
                 <p><%= event.address_line_2%></p>
-                <button class="view"><a href="/events/<%= event.id %>">View Details</a></button>
                 <form action="<%=`/delete/${event.id}`%>" method="POST">
+                    <button class="view"><a href="/events/<%= event.id %>">View Details</a></button>
                     <input type="hidden" name="_method" value="delete">
                     <input type="hidden" name="id" value="<%= event.id %>">
                     <button class="update">Delete Event</button>
