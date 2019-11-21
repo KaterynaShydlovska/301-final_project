@@ -17,12 +17,12 @@
             <% results.forEach(event => { %>
             <li>
                 <h3><%= event.name %></h3>
+                <img src="<%=event.img_url%>" />
                 <p> <%= `${(((new Date(event.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(event.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(event.date)).toString()).substr(0, 15)).substr(11, 5)}`%> at <%=event.venue%></p>
                 <p></p>
-                <p class="parades"><%= event.description %></p>
+                <p ><%= event.description %></p>
                 <p><%= event.address_line_1 %></p>
                 <p><%= event.address_line_2%></p>
-                <img src="<%=event.img_url%>" />
                 <button class="view"><a href="/events/<%= event.id %>">View Details</a></button>
                 <form action="<%=`/delete/${event.id}`%>" method="POST">
                     <input type="hidden" name="_method" value="delete">
