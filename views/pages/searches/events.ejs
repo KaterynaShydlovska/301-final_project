@@ -15,13 +15,13 @@
       <ul id="eventUl">
         <% eventsArrKey.forEach(events => { %>
         <li class="eventList">
-          <h3><%= events.name %></h3> 
+          <h3><%= events.name %></h3>
           <img class="eventimg" src="<%=events.img_url%>" />
-          <p><%= `${(((new Date(events.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(events.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(11, 5)}` %> at <%=events.venue%></p> 
+          <p><%= `${(((new Date(events.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(events.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(11, 5)}` %> at <%=events.venue%></p>
           <p class="parades"><%= events.description %></p>
           <p id="readMore">...</p>
           <form action="/events" method="post">
-            <input name="name" value="<%= events.name %>" type="hidden"/> 
+            <input name="name" value="<%= events.name %>" type="hidden"/>
             <input name="date" value="<%= events.date %>" type="hidden">
             <input name="venue" value="<%= events.description %>" type="hidden">
             <input name="address_line_1" value="<%= events.address_line_1 %>" type="hidden">
