@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 require('dotenv').config();
 
@@ -14,13 +14,13 @@ require('ejs');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const client = new pg.Client(process.env.DATABASE_URL)
+const client = new pg.Client(process.env.DATABASE_URL);
 
 //added line below in case it's needed later
 client.on('err', err => { throw err; });
 ////////////////////////////////////////////
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true, }));
 //added line below for when it's needed later
 app.set('view engine', 'ejs');
 ////////////////////////////////////////////
@@ -78,7 +78,7 @@ function searchHandler(req, res) {
 
   superagent.get(url)
     .then(data => data.body._embedded.events.map(events => new TicketMaster(events)))
-    .then(eventsArr => res.render('pages/searches/events', { eventsArrKey: eventsArr }))
+    .then(eventsArr => res.render('pages/searches/events', { eventsArrKey: eventsArr, }))
     .catch(() => {
       res.render('pages/error');
     });
@@ -103,7 +103,7 @@ function TicketMaster(events) {
 function addEvent(req, res) {
   console.log('saving that event to the database...', req.body, req.params);
 
-  let { name, date, venue, description, address_line_1, address_line_2, address_line_3, img_url } = req.body;
+  let { name, date, venue, description, address_line_1, address_line_2, address_line_3, img_url, } = req.body;
 
   // save book to database
   let sql = 'INSERT INTO my_events (name, date, venue, description, address_line_1, address_line_2, address_line_3, img_url) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);';
@@ -120,11 +120,11 @@ function getEvents(req, res) {
   return client.query(SQL)
     .then(results => {
       // console.log(results);
-      return res.render('pages/searches/savedEvents', { results: results.rows })
+      return res.render('pages/searches/savedEvents', { results: results.rows, });
     })
     .catch(() => {
       res.render('pages/error');
-    })
+    });
   // res.render('pages/index');
 }
 
@@ -135,7 +135,7 @@ function getOneEvent(req, res) {
 
   return client.query(SQL, values)
     .then(result => {
-      return res.render('pages/searches/eventDetail', { event: result.rows[0] });
+      return res.render('pages/searches/eventDetail', { event: result.rows[0], });
     })
     .catch(err => console.error(err));
 }
@@ -167,9 +167,9 @@ client.connect()
   .then(() => {
     app.listen(PORT, () => {
       console.log(`listening on ${PORT}`);
-    })
+    });
   })
   .catch(err => {
     throw `PG startup error ${err.message}`;
-  })
+  });
 
