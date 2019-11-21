@@ -57,7 +57,7 @@ footer {
   grid-column: 1 / span 1;
   /* background-color: #ffa600; */
   text-align: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 100%;
 }
 
@@ -65,7 +65,7 @@ footer {
   grid-column: 2 / span 1;
   /* background-color: yellow; */
   text-align: left;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 #savedEventContainer, #searhedEventContainer {
