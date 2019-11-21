@@ -285,10 +285,10 @@ box-shadow: 5px 2px #1A3D43; */
   border: none;
 }
 .aboutDiv{
-  width: 45%;
-  height: 45%;
-  /* width:  400px;
-  height: 367px; */
+  /* width: 45%;
+  height: 45%; */
+  width:  390px;
+  /* height: 367px; */
   text-align: center;
 
 }
@@ -313,3 +313,5 @@ height: 50%;
 width: 20%;
 }
 }
+
+
