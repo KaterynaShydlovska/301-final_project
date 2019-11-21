@@ -15,10 +15,11 @@
       <ul id="eventUl">
         <% eventsArrKey.forEach(events => { %>
         <li class="eventList">
-          <img class="eventimg" src="<%=events.img_url%>" />
-          <h3><%= events.name %></h3>
-          <p><%= `${(((new Date(events.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(events.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(11, 5)}` %> at <%=events.venue%></p>
+          <img class="eventimg" src="<%=events.img_url%>" /><br>
+          <h3><%= events.name %></h3> <br>
+          <p><%= `${(((new Date(events.date)).toString()).substr(0, 15)).substr(0, 3)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(4, 3)} ${(((new Date(events.date)).toString()).substr(0, 15)).substr(8, 2)}, ${(((new Date(events.date)).toString()).substr(0, 15)).substr(11, 5)}` %> at <%=events.venue%></p> <br>
           <p><%= events.description %></p>
+          <button id="save" class="view">Save Event</button>
         </li>
         <form action="/events" method="post">
           <input name="name" value="<%= events.name %>" type="hidden"/> 
@@ -28,7 +29,6 @@
           <input name="address_line_2" value="<%= events.address_line_2 %>" type="hidden">
           <input name="address_line_3" value="<%= events.address_line_3 %>" type="hidden">
           <input name="img_url" value="<%= events.img_url %>" type="hidden">
-          <button id="save" class="view">Save Event</button>
       </form>
         <% }) %>
       </ul>
