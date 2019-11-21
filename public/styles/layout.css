@@ -2,7 +2,6 @@
   box-sizing: border-box;
   /* border: 1px solid red; */
 }
-
 img {
   height: 50px;
 }
@@ -19,10 +18,6 @@ main {
   display: grid;
   grid-template-columns: 30% 70%;
   overflow: scroll;
-}
-.nav{
-  display: inline;
-  margin: 10px;
 }
 
 #aboutDiv {
@@ -45,11 +40,15 @@ header {
 nav {
   grid-row: 2 / span 1;
   text-align: center;
+  display: inline;
+  margin: 10px;
+  line-height: 20px;
 }
 
 footer {
   grid-row: 4 / span 1;
   text-align: center;
+  line-height: 50px;
 }
 
 #searchCats {
@@ -181,19 +180,42 @@ section#search-form {
     grid-column: 1 / span 3;
     display: grid;
     height: 500fr;
-    overflow: scroll;
+    overflow: unset;
     height: 100%;
-    overflow: scroll;
+    /* overflow: scroll; */
   }
 
   ul {
-    grid-column: 1 / span 3;
+    /* grid-column: 1 / span 3; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* vertical-align: 2px; */
+    align-items: stretch;
   }
+ li{
+   overflow: hidden;
+   /* display: flex;
+   flex-direction: column;
+   justify-content: space-between; */
+   display: inline;
+   /* width: 35%;
+   height: 35%; */
+   width:  517.719px;
+   height: 367.038px;
+   /* border: 2px dashed #1A3D43; */
+border-top-left-radius: 15%  ;
+border-bottom-right-radius: 15%;
+text-align: center;
+box-shadow: 5px 2px #1A3D43;
 
-  li img {
+ }
+  /* li img {
     float: left;
-    height: 100%;
-  }
+    height: 50%;
+    width: 40%;
+  } */
 
   #searchCats {
     display: grid;
@@ -205,10 +227,12 @@ section#search-form {
   #search-form {
     grid-column: 2 / span 1;
     text-align: center;
+  } 
+#indexMain{
+  overflow: unset;
   }
 } 
- #indexMain{
-  overflow: unset; 
+
 }
 #bodyIndex{
     width: 100vw;
@@ -216,4 +240,43 @@ section#search-form {
        margin: 0 auto;
       
        size: 100%;
+
+
+#about{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow: hidden;
 }
+#aboutDiv >h1{
+ /* display: flex;
+ flex-direction: column;
+ text-align: center;
+ justify-content: space-between; */
+ color: white;
+ vertical-align: text-top;
+ padding: 0;
+ height: 80px;
+}
+.photo{
+  width: 250px;
+  height: 276px;
+}
+#aboutbody > header{
+  height: 80px;
+}
+#aboutDiv{
+  height: 80px;
+  vertical-align: middle;
+
+}
+#search-form{
+  border: none;
+}
+.aboutDiv{
+  width:  400px;
+  height: 367px;
+  text-align: center;
+
+}
+
