@@ -11,7 +11,7 @@ body {
   grid-template-rows: /* header */ 75fr /* nav */ 30fr /* main */ 500fr /* footer */ 75fr;
   height: 767px;
   margin: 0 auto;
-  width: 480px;
+  /* width: 480px; */
 }
 
 main {
