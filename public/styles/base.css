@@ -18,6 +18,7 @@ a{
   text-decoration: none;
   font-family:'Bebas Neue', cursive;
   color: gray;  
+  font-size: 20px;
 }
 a:hover{
   color: black;
@@ -51,37 +52,6 @@ footer{
 .linkFooter:hover{
   color:whitesmoke;
 }
-/* .hamburger{
-  background:none; 
-   position:absolute;
-  /* position: relative;*/
-  /* top:0; */
- 
-  /*line-height:45px; */
-  /* padding:5px 15px 0px 15px; */
-  /* color:#999;
-  border:0;
-  font-size:1em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
-}
-.cross{
-  background:none; */
-  /* position:absolute;*/
-  /* top:0px; */
-  /*right:0; */
-  /* padding:7px 15px 0px 15px; */
-  /* color:#999;
-  border:0;
-  font-size:3em;
-  line-height:65px;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
-} */
 
 .menu{z-index:1000000; font-weight:bold; font-size:1em; width:100%; background:#f1f1f1;  text-align:center; font-size:12px;}
 .menu a {margin-top: 0; padding: 0; list-style-type: none; list-style-image: none;}
@@ -93,18 +63,5 @@ footer{
 .menu a:hover{text-decoration:none; color:#666;}
 
 .nav-bar{
-  font-size: 18px;
+  font-size: 24px;
 }
-
-/* .glyphicon-home{
-  color:white; 
-  font-size:1.5em; 
-  margin-top:5px; 
-  margin:0 auto;
-} */
-/* header{display:inline-block; font-size:12px;} */
-/* span{padding-left:20px;} */
-/* a{color:#336699;} */
-
-
-
