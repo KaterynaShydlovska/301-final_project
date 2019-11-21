@@ -2,13 +2,14 @@
   box-sizing: border-box;
   /* border: 1px solid red; */
 }
-img {
+
+header img {
   height: 50px;
 }
 
 body {
   display: grid;
-  grid-template-rows: /* header */ 75fr /* nav */ 30fr /* main */ 500fr /* footer */ 75fr;
+  grid-template-rows: /* header */ 75fr /* nav */ 30fr /* main */ 500fr /* footer */ 30fr;
   height: 767px;
   margin: 0 auto;
   /* width: 480px; */
@@ -48,7 +49,7 @@ nav {
 footer {
   grid-row: 4 / span 1;
   text-align: center;
-  line-height: 50px;
+  line-height: 20px;
 }
 
 #searchCats {
@@ -85,6 +86,12 @@ footer {
   overflow: scroll;
   height: 100%;
   padding: 30px;
+}
+
+#savedImage {
+  float: left;
+  height: 30%;
+  width: 40%;
 }
 
 li {
