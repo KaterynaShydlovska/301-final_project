@@ -30,6 +30,7 @@ main {
   display: flex;
   grid-row: 3 / span 1;
   flex-direction: column;
+  overflow: unset;
 }
 
 header {
@@ -294,7 +295,7 @@ box-shadow: 5px 2px #1A3D43; */
 .aboutDiv{
   /* width: 45%;
   height: 45%; */
-  width:  390px;
+  width:  340px;
   /* height: 367px; */
   text-align: center;
 
